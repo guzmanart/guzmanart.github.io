@@ -11083,3 +11083,14 @@ body.loaded:after {
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
 }
+
+
+.bottom-left-text {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+
+
+
