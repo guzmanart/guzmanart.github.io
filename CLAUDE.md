@@ -4,6 +4,31 @@ This repository is Clara Guzman's art portfolio, published with GitHub Pages at
 https://guzmanart.github.io. Clara is an artist, not a developer: keep explanations
 short and non-technical, and make changes for her rather than telling her how.
 
+## Current status (handoff, November 2026)
+
+A full redesign lives on the `redesign-2026` branch. `master` still holds the old 2022
+site, which is what guzmanart.github.io shows. Clara wants to review and edit the
+redesign before anything is published, so:
+
+- Work on `redesign-2026`. Do not push to `master` until Clara says to publish.
+- To publish when she's ready: merge `redesign-2026` into `master` and push. The site
+  updates within a couple of minutes.
+- To show her a change before publishing, build and send screenshots, or publish a
+  preview page if your tools allow it.
+
+These details were filled in as best guesses and need Clara's confirmation:
+- Titles invented from file names or subjects: Eve, Portrait of a Seated Man, Peonies,
+  Study of an Eye, Rings, Study of a Veiled Woman, JT, Chica, most watercolor and
+  drawing titles.
+- Mediums guessed: everything except Indigo Girl (pastel), Emily (gouache, 22 × 30 in),
+  Self-Portrait (pastel, 20 × 20 in) and Prison Guy (acrylic, 18 × 24 in).
+- Years come from when the photos were taken, not when the work was made.
+- The About text in `content/site.yaml` (mentions Harvard College and the School of
+  Sacred Art in Florence) and the commissions blurb.
+- Email and Instagram are empty, so the Contact page says "coming soon".
+- Left out on purpose: the Nobelium magazine layouts and some duplicate or
+  low-resolution photos. The old files are in git history (commit 2202c47).
+
 ## How the site works
 
 - `content/site.yaml` holds site-wide text: intro, bio, email, Instagram, collections.
