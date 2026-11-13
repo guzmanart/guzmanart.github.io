@@ -1,0 +1,52 @@
+# Site-wide text and settings. Edit freely, then run `python3 build.py`.
+
+name: Clara Guzman
+tagline: Painting & Drawing
+url: https://guzmanart.github.io
+
+# One or two sentences shown on the home page.
+intro: >-
+  Clara Guzman paints portraits, figures and still lifes in oil, pastel and
+  watercolor. She studied painting in the classical tradition at the School
+  of Sacred Art in Florence, Italy.
+
+# About page. Separate paragraphs with a blank line.
+bio: |
+  Clara Guzman is a figurative artist. Her work moves between oil painting,
+  pastel portraiture, watercolor and drawing from life, and returns again and
+  again to the human face.
+
+  She spent a year studying painting at the School of Sacred Art in Florence,
+  Italy, where she trained in drawing and oil painting in the classical
+  tradition.
+
+  Before Florence, her pastel portraits explored identity, history and light
+  on skin, from Indigo Girl to Dreamer. She studied at Harvard College.
+
+portrait: clara.jpg   # file in images/src/
+
+# Contact. Leave a value empty ("") to hide it on the site.
+email: ""
+instagram: ""   # handle without the @, e.g. claraguzmanart
+commissions: >-
+  Clara accepts a limited number of portrait commissions each year. Write with
+  a few words about the subject, size and timeline you have in mind.
+
+# Collections appear in this order in the navigation.
+collections:
+  - slug: oil
+    title: Oil & Acrylic
+    nav: Oil
+    description: Paintings in oil and acrylic, including work from Florence.
+  - slug: pastel
+    title: Pastel
+    nav: Pastel
+    description: Portraits built up in layers of hard and soft pastel.
+  - slug: watercolor
+    title: Watercolor & Mixed Media
+    nav: Watercolor
+    description: Watercolor, gouache, ink wash and mixed media.
+  - slug: drawing
+    title: Drawing
+    nav: Drawing
+    description: Graphite, charcoal and ink, from the figure and from life.

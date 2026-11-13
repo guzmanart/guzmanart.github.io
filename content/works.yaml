@@ -1,0 +1,358 @@
+# Every artwork on the site. Works appear in this order within each collection.
+#
+# Fields:
+#   slug        unique id, lowercase-with-dashes; the main image is images/src/<slug>.jpg
+#   title       shown in italics
+#   collection  one of the collection slugs in site.yaml (oil, pastel, watercolor, drawing)
+#   medium, size, year   optional; leave out or "" if unknown
+#   featured    true = shown on the home page (keep about 6)
+#   status      optional: available / sold / private / commission
+#   statement   optional paragraph(s) about the work
+#   details     optional extra images (close-ups): images/src/<slug>-detail-1.jpg, ...
+#   process     optional in-progress photos: images/src/<slug>-process-1.jpg, ...
+#   (details/process are just counts: details: 2 means -detail-1 and -detail-2)
+
+# ---------- Oil & Acrylic ----------
+- slug: eve
+  title: Eve
+  collection: oil
+  medium: Oil
+  year: 2022
+  featured: true
+  details: 2
+
+- slug: seated-man
+  title: Portrait of a Seated Man
+  collection: oil
+  medium: Oil
+  year: 2022
+  featured: true
+
+- slug: peonies
+  title: Peonies
+  collection: oil
+  medium: Oil
+  year: 2021
+  featured: true
+
+- slug: eye-study
+  title: Study of an Eye
+  collection: oil
+  medium: Oil
+  year: 2021
+
+- slug: prison-guy
+  title: Prison Guy
+  collection: oil
+  medium: Acrylic
+  size: 18 × 24 in
+  year: 2018
+
+- slug: rings
+  title: Rings
+  collection: oil
+  details: 1
+
+# ---------- Pastel ----------
+- slug: indigo-girl
+  title: Indigo Girl
+  collection: pastel
+  medium: Pastel
+  year: 2017
+  featured: true
+  process: 2
+  statement: |
+    Light on dark skin fascinates me. It reflects dozens of colors: violets,
+    sapphires, cerulean, even vermilion. To create the undertones on Indigo Girl,
+    I applied hard pastel according to the planes of the face, in bright blues
+    and purples, then lighter tones in the second and third layers. The effect
+    of inner illumination makes her appear to be her own light source.
+
+    Indigo was a slave crop of the Chesapeake Bay.
+
+- slug: dreamer
+  title: "Dreamer (21st Century Trail of Tears)"
+  collection: pastel
+  medium: Pastel
+  year: 2018
+  featured: true
+  process: 2
+  statement: |
+    I love portraiture. I think people are the most interesting subjects to
+    paint. DACA Dreamers reminded me of the Native Americans of the
+    nineteenth-century Trail of Tears, so my 21st Century Trail of Tears
+    illustrates the irony of our immigration debates.
+
+    This Dreamer is my version of a modern-day Statue of Liberty. She could be
+    Latina, Native American or mixed, legal or undocumented. She begs the
+    question: who is really American?
+
+- slug: liberadora
+  title: Liberadora
+  collection: pastel
+  medium: Pastel
+  year: 2018
+  process: 2
+  statement: |
+    Shellshock. Light and shadow on her face. Liberadora is a freedom fighter in
+    the Spanish Civil War. Aerial bombs have destroyed her town, and there is
+    chaos all around her: a mother clinging to her bundle, a limp child, and a
+    horse galloping through the broken bodies peek through the smoke. This is
+    how I envision my freedom fighter of Guernica.
+
+- slug: hester
+  title: Hester
+  collection: pastel
+  medium: Pastel
+  year: 2018
+  process: 1
+  statement: |
+    Hester is a young woman whose hair is graying. She could be Hester Prynne
+    from The Scarlet Letter, or a woman of the Salem witch trials. Stunned, she
+    looks her accuser in the eye.
+
+    I blended flesh, golden and yellow ochres with unexpected English and
+    turquoise blues, and purplish blue-greys for shading her face and
+    collarbones.
+
+- slug: north
+  title: North
+  collection: pastel
+  medium: Pastel
+  year: 2017
+  process: 1
+  statement: |
+    This North Korean woman stands at the border between light and dark. Kim
+    Jong Un's profile lurches in the shadows as light shines from her other
+    side. Her face is mask-like, to reflect the oppressive regime, and carries
+    the red and blue of the yin and yang on the South Korean flag.
+
+- slug: jt
+  title: JT
+  collection: pastel
+  medium: Pastel
+  year: 2018
+
+- slug: self-portrait
+  title: Self-Portrait (in progress)
+  collection: pastel
+  medium: Pastel
+  size: 20 × 20 in
+  year: 2018
+
+# ---------- Watercolor & Mixed Media ----------
+- slug: lilies
+  title: Stargazer Lilies
+  collection: watercolor
+  medium: Watercolor
+  details: 2
+
+- slug: delphinium
+  title: Delphinium in a Blue-and-White Vase
+  collection: watercolor
+  medium: Watercolor
+  details: 1
+  process: 2
+
+- slug: emily
+  title: Emily
+  collection: watercolor
+  medium: Gouache
+  size: 22 × 30 in
+  year: 2015
+
+- slug: sleeping-violet
+  title: Sleeping, Violet
+  collection: watercolor
+  medium: Watercolor and ink
+  year: 2018
+
+- slug: sleeping-blue
+  title: Sleeping, Blue
+  collection: watercolor
+  medium: Watercolor and ink
+
+- slug: blue-study
+  title: Study in Blue
+  collection: watercolor
+  medium: Watercolor
+
+- slug: alley
+  title: Alley at Night
+  collection: watercolor
+  year: 2018
+  process: 2
+
+- slug: blue-rose
+  title: Blue Rose
+  collection: watercolor
+  medium: Watercolor
+
+- slug: rose
+  title: Rose
+  collection: watercolor
+  medium: Watercolor
+
+- slug: crimson-rose
+  title: Crimson Rose
+  collection: watercolor
+  medium: Watercolor
+
+- slug: red-bloom
+  title: Red Bloom
+  collection: watercolor
+  medium: Watercolor
+
+- slug: pears
+  title: Pears
+  collection: watercolor
+  medium: Watercolor
+
+- slug: sunflower
+  title: Sunflower
+  collection: watercolor
+  medium: Watercolor
+
+- slug: ink-sphere
+  title: Ink Study, Sphere
+  collection: watercolor
+  medium: Ink wash
+
+- slug: ink-shoe
+  title: Ink Study, Shoe
+  collection: watercolor
+  medium: Ink wash
+
+- slug: drip-1
+  title: Drip Study I
+  collection: watercolor
+  medium: Ink
+  year: 2016
+
+- slug: drip-2
+  title: Drip Study II
+  collection: watercolor
+  medium: Ink and metallic paint
+
+- slug: drip-3
+  title: Drip Study III
+  collection: watercolor
+  medium: Ink and metallic paint
+
+- slug: drip-4
+  title: Drip Study IV
+  collection: watercolor
+  medium: Ink
+  year: 2016
+
+- slug: scream
+  title: Untitled (Scream)
+  collection: watercolor
+  medium: Mixed media
+  year: 2018
+
+# ---------- Drawing ----------
+- slug: veiled-woman
+  title: Study of a Veiled Woman
+  collection: drawing
+  medium: Graphite
+  year: 2020
+  featured: true
+
+- slug: chica
+  title: Chica
+  collection: drawing
+  year: 2018
+
+- slug: rose-study
+  title: Rose
+  collection: drawing
+  medium: Graphite
+
+- slug: skull
+  title: Skull
+  collection: drawing
+  medium: Graphite
+
+- slug: portrait-study-charcoal
+  title: Portrait Study
+  collection: drawing
+  medium: Charcoal
+
+- slug: portrait-study-graphite
+  title: Portrait Study in Graphite
+  collection: drawing
+  medium: Graphite
+
+- slug: figure-seated
+  title: Seated Figure
+  collection: drawing
+  medium: Charcoal
+
+- slug: figure-torso
+  title: Torso
+  collection: drawing
+  medium: Charcoal
+  year: 2017
+
+- slug: figure-standing
+  title: Standing Figure
+  collection: drawing
+  medium: Charcoal
+  year: 2018
+
+- slug: figure-back-1
+  title: Figure from Behind I
+  collection: drawing
+  medium: Charcoal
+
+- slug: figure-back-2
+  title: Figure from Behind II
+  collection: drawing
+  medium: Charcoal
+
+- slug: figure-study-3
+  title: Figure Study
+  collection: drawing
+  medium: Charcoal
+
+- slug: figure-study-7
+  title: Figure Study, Back
+  collection: drawing
+  medium: Charcoal
+
+- slug: gesture-sheet-1
+  title: Gesture Studies I
+  collection: drawing
+  medium: Ink wash
+  year: 2018
+
+- slug: gesture-sheet-2
+  title: Gesture Studies II
+  collection: drawing
+  medium: Ink wash
+  year: 2018
+
+- slug: line-study-1
+  title: Line Study I
+  collection: drawing
+  medium: Ink
+  year: 2018
+
+- slug: line-study-2
+  title: Line Study II
+  collection: drawing
+  medium: Ink
+  year: 2018
+
+- slug: line-study-3
+  title: Line Study III
+  collection: drawing
+  medium: Ink
+  year: 2018
+
+- slug: line-study-4
+  title: Line Study IV
+  collection: drawing
+  medium: Ink
+  year: 2018

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}{{ w.title }} | {{ site.name }}{% endblock %}
+{% block description %}{{ w.title }}{% if w.medium %}, {{ w.medium | lower }}{% endif %}{% if w.year %}, {{ w.year }}{% endif %}, by {{ site.name }}.{% endblock %}
+{% block og_image %}<meta property="og:image" content="{{ site.url }}/{{ w.image.m.src }}">{% endblock %}
+{% block main %}
+<article class="work">
+  <div class="work-art">
+    <button class="zoom" type="button" data-full="{{ root }}{{ w.image.l.src }}" data-group="work" aria-label="View {{ w.title }} larger">
+      <span class="mat mat-lg"><img src="{{ root }}{{ w.image.l.src }}" width="{{ w.image.l.w }}" height="{{ w.image.l.h }}" alt="{{ w.title }}" fetchpriority="high"></span>
+    </button>
+  </div>
+  <div class="work-info">
+    <p class="eyebrow"><a href="{{ root }}collection/{{ w.coll.slug }}.html">{{ w.coll.title }}</a></p>
+    <h1 class="work-title">{{ w.title }}</h1>
+    <dl class="facts">
+      {% if w.medium %}<div><dt>Medium</dt><dd>{{ w.medium }}</dd></div>{% endif %}
+      {% if w.size %}<div><dt>Size</dt><dd>{{ w.size }}</dd></div>{% endif %}
+      {% if w.year %}<div><dt>Year</dt><dd>{{ w.year }}</dd></div>{% endif %}
+      {% if w.status %}<div><dt>Status</dt><dd>{{ w.status | capitalize }}</dd></div>{% endif %}
+    </dl>
+    {% for p in w.paras %}<p>{{ p }}</p>{% endfor %}
+    <p class="inquire">
+      {% if site.email %}<a href="mailto:{{ site.email }}?subject={{ ('Inquiry: ' ~ w.title) | urlencode }}">Inquire about this work</a>
+      {% else %}<a href="{{ root }}contact.html">Inquire about this work</a>{% endif %}
+    </p>
+  </div>
+</article>
+
+{% if w.details_img %}
+<section class="section">
+  <h2 class="section-title"><span>Details</span></h2>
+  <div class="strip">
+    {% for i in w.details_img %}
+    <button class="zoom" type="button" data-full="{{ root }}{{ i.l.src }}" data-group="work" aria-label="View detail {{ loop.index }} larger"><img src="{{ root }}{{ i.m.src }}" width="{{ i.m.w }}" height="{{ i.m.h }}" alt="Detail of {{ w.title }}" loading="lazy"></button>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if w.process_img %}
+<section class="section">
+  <h2 class="section-title"><span>In the Studio</span></h2>
+  <div class="strip">
+    {% for i in w.process_img %}
+    <button class="zoom" type="button" data-full="{{ root }}{{ i.l.src }}" data-group="work" aria-label="View studio photo {{ loop.index }} larger"><img src="{{ root }}{{ i.m.src }}" width="{{ i.m.w }}" height="{{ i.m.h }}" alt="{{ w.title }} in progress" loading="lazy"></button>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<nav class="pager" aria-label="More from {{ w.coll.title }}">
+  {% if w.prev %}<a class="prev" href="{{ w.prev.slug }}.html"><span>&larr; Previous</span><em>{{ w.prev.title }}</em></a>{% else %}<span></span>{% endif %}
+  <a class="all" href="{{ root }}collection/{{ w.coll.slug }}.html">All {{ w.coll.title }}</a>
+  {% if w.next %}<a class="next" href="{{ w.next.slug }}.html"><span>Next &rarr;</span><em>{{ w.next.title }}</em></a>{% else %}<span></span>{% endif %}
+</nav>
+{% endblock %}

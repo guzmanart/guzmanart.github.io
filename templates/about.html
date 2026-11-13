@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}About | {{ site.name }}{% endblock %}
+{% block main %}
+<article class="about">
+  {% if portrait %}
+  <figure class="about-photo"><span class="mat"><img src="{{ portrait.m.src }}" width="{{ portrait.m.w }}" height="{{ portrait.m.h }}" alt="Portrait of {{ site.name }}"></span></figure>
+  {% endif %}
+  <div class="about-text">
+    <h1>About</h1>
+    {% for p in bio %}<p{% if loop.first %} class="lede"{% endif %}>{{ p }}</p>{% endfor %}
+    <p><a class="button" href="contact.html">Commissions &amp; inquiries</a></p>
+  </div>
+</article>
+{% endblock %}

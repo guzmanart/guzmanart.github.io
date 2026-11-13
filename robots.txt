@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://guzmanart.github.io/sitemap.xml

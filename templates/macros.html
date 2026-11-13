@@ -1,0 +1,14 @@
+{% macro caption(w) -%}
+<span class="cap-title">{{ w.title }}</span>
+{%- set bits = [w.medium, w.year] | select | list %}
+{%- if bits %}<span class="cap-meta">{{ bits | join(', ') }}</span>{% endif %}
+{%- endmacro %}
+
+{% macro tile(w, root, eager=false) -%}
+<figure class="tile">
+  <a href="{{ root }}{{ w.url }}">
+    <span class="mat"><img src="{{ root }}{{ w.image.m.src }}" width="{{ w.image.m.w }}" height="{{ w.image.m.h }}" alt="{{ w.title }}{% if w.medium %}, {{ w.medium | lower }}{% endif %}" {% if not eager %}loading="lazy" {% endif %}decoding="async"></span>
+    <figcaption>{{ caption(w) }}</figcaption>
+  </a>
+</figure>
+{%- endmacro %}

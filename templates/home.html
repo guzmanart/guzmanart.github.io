@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% from "macros.html" import tile %}
+{% block title %}{{ site.name }} | {{ site.tagline }}{% endblock %}
+{% set hero = featured[0] if featured else None %}
+{% block og_image %}{% if hero %}<meta property="og:image" content="{{ site.url }}/{{ hero.image.m.src }}">{% endif %}{% endblock %}
+{% block main %}
+{% if hero %}
+<section class="hero">
+  <a class="hero-art" href="{{ hero.url }}">
+    <span class="mat mat-lg"><img src="{{ hero.image.l.src }}" width="{{ hero.image.l.w }}" height="{{ hero.image.l.h }}" alt="{{ hero.title }}" fetchpriority="high"></span>
+  </a>
+  <div class="hero-text">
+    <p class="eyebrow">Portraits &middot; Figures &middot; Still Life</p>
+    <p class="lede">{{ site.intro | trim }}</p>
+    <p class="hero-caption">Above: <a href="{{ hero.url }}"><em>{{ hero.title }}</em></a>{% if hero.medium %}, {{ hero.medium | lower }}{% endif %}{% if hero.year %}, {{ hero.year }}{% endif %}</p>
+    <p><a class="button" href="collection/{{ collections[0].slug }}.html">View the work</a></p>
+  </div>
+</section>
+{% endif %}
+
+{% if featured | length > 1 %}
+<section class="section">
+  <h2 class="section-title"><span>Selected Works</span></h2>
+  <div class="grid grid-featured">
+    {% for w in featured[1:] %}{{ tile(w, root) }}{% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <h2 class="section-title"><span>Collections</span></h2>
+  <div class="collections">
+    {% for c in collections if c.cover %}
+    <a class="coll-card" href="collection/{{ c.slug }}.html">
+      <span class="coll-num">{{ ['I','II','III','IV','V','VI','VII','VIII'][loop.index0] }}</span>
+      <span class="coll-img"><img src="{{ c.cover.image.m.src }}" alt="" loading="lazy" decoding="async"></span>
+      <span class="coll-title">{{ c.title }}</span>
+      <span class="coll-count">{{ c.works | length }} works</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

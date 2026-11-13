@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Contact | {{ site.name }}{% endblock %}
+{% block main %}
+<article class="contact">
+  <h1>Commissions &amp; Inquiries</h1>
+  <p class="lede">{{ site.commissions | trim }}</p>
+  {% if site.email %}
+  <p class="contact-line"><a class="button" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  {% endif %}
+  {% if site.instagram %}
+  <p class="contact-line">Instagram: <a href="https://instagram.com/{{ site.instagram }}">@{{ site.instagram }}</a></p>
+  {% endif %}
+  {% if not site.email and not site.instagram %}
+  <p class="contact-line muted">Contact details coming soon.</p>
+  {% endif %}
+</article>
+{% endblock %}
