@@ -11,6 +11,7 @@
 #   details     optional extra images (close-ups): images/src/<slug>-detail-1.jpg, ...
 #   process     optional in-progress photos: images/src/<slug>-process-1.jpg, ...
 #   (details/process are just counts: details: 2 means -detail-1 and -detail-2)
+# Edit-access check, 2026-11-12 (comment only, not shown on the site)
 
 # ---------- Oil & Acrylic ----------
 - slug: eve
